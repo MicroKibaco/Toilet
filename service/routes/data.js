@@ -9,6 +9,7 @@ var PATH = './public/data/';
 router.get('/read', function (req, res, next) {
 
     var type = req.param('type') || '';
+
     fs.readFile(PATH + type + '.json', function (err, data) {
 
         if (err) {
@@ -49,5 +50,91 @@ router.get('/read', function (req, res, next) {
     });
 
 });
+
+// 数据存储模块
+router.get('/write', function (req, res, next) {
+    // 文件名
+    var type = req.param('type') || '';
+    // 关键字段
+    var url = req.param('url') || '';
+    var title = req.param('title') || '';
+    var img = req.param('img') || '';
+
+    if (!type || !url || !img) {
+
+        return res.send({
+
+                            status: 0,
+                            info: '提交字段不全'
+
+                        });
+
+    }
+
+    // 1.需要拿到文件的信息
+    fs.readFile(PATH + type + '.json', function (err, data) {
+
+        if (err) {
+
+            return res.send({
+
+                                status: 0,
+                                info: '读取数据失败'
+
+                            });
+
+        }
+
+        var arr = JSON.parse(data.toString());
+
+        // 代表每一条记录
+        var obj = {
+
+            img: img,
+            url: url,
+            title: title,
+            id: guidGenerate(),
+            time: new Date()
+
+        };
+
+        arr.splice(0, 0, obj);
+
+        // 2.写入文件
+
+        var newData = JSON.stringify(arr);
+
+        fs.writeFile(PATH + type + '.json', newData, function (err, data) {
+
+            if (err) {
+                return res.send({
+
+                                    status: 0,
+                                    info: '写入文件失败'
+
+                                });
+            }
+
+            return res.send({
+
+                                status: 1,
+                                info: obj
+                            });
+
+        });
+
+    });
+    // 3.读取文件
+
+});
+
+// guid
+function guidGenerate() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16 | 0,
+            v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    }).toUpperCase();
+}
 
 module.exports = router;
