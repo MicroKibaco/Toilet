@@ -1,0 +1,144 @@
+{
+  "resultFlag": 1,
+  "resultMsg": null,
+  "errorCode": "",
+  "errorMsg": null,
+  "authCode": null,
+  "bizData": [
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "4G套餐升档、新套餐办理酬金",
+      "rewardTypeName": "2016年7月4G套餐办理、升档酬金补算",
+      "amount": 23.2
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "客户发展酬金",
+      "rewardTypeName": "递延分成酬金（38元飞享套卡）",
+      "amount": 22.8
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "首充业务酬金",
+      "rewardTypeName": "首充业务酬金",
+      "amount": 50.0
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "客户发展酬金",
+      "rewardTypeName": "2016年9月（结算月）递延分成酬金（后付费）补算",
+      "amount": 69.8
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "4G自带机酬金",
+      "rewardTypeName": "4G自带机转化酬金",
+      "amount": 275.0
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "4G自带机酬金",
+      "rewardTypeName": "4G自带机分成酬金",
+      "amount": 601.33
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "其他酬金",
+      "rewardTypeName": "2016年7月办理融套“千家万户”阶段性激励(40%酬金)",
+      "amount": 112.0
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "客户发展酬金",
+      "rewardTypeName": "递延分成酬金（4G上网卡）",
+      "amount": 0.0
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "4G套餐升档、新套餐办理酬金",
+      "rewardTypeName": "2016年10月（结算月）4G套餐升档、新套餐办理酬金",
+      "amount": 179.7
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "其他酬金",
+      "rewardTypeName": "待扣酬金",
+      "amount": 0.0
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "终端酬金",
+      "rewardTypeName": "阶段性酬金",
+      "amount": 304.65
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "4G套餐升档、新套餐办理酬金",
+      "rewardTypeName": "客户4G套餐升档酬金",
+      "amount": 4.92
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "客户发展酬金",
+      "rewardTypeName": "递延分成酬金（预付费）",
+      "amount": 163.2
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "其他酬金",
+      "rewardTypeName": "2016年5月办理融套“千家万户”阶段性激励(30%酬金)",
+      "amount": 122.4
+    },
+    {
+      "payMonth": 201610,
+      "chnlCode": "ZS_TDZS04A102075",
+      "chnlName": "中山市东区富平通讯商行",
+      "bizTypeName": "个人业务",
+      "rewardBtypeName": "其他酬金",
+      "rewardTypeName": "2016年6月办理融套“千家万户”阶段性激励(30%酬金)",
+      "amount": 185.4
+    }
+  ]
+}
