@@ -35,7 +35,7 @@ class toilet extends Component {
                     selected={this.state.selectedTab === 'toilet'}
                     onPress={() => {
                         this.setState({
-                                          selectedTab: 'toilet',
+                                          selectedTab: 'toilet'
                                       });
                     }}
                 >
@@ -47,7 +47,7 @@ class toilet extends Component {
                     selected={this.state.selectedTab === 'read'}
                     onPress={() => {
                         this.setState({
-                                          selectedTab: 'read',
+                                          selectedTab: 'read'
                                       });
                     }}
 
@@ -61,7 +61,7 @@ class toilet extends Component {
                     selected={this.state.selectedTab === 'weather'}
                     onPress={() => {
                         this.setState({
-                                          selectedTab: 'weather',
+                                          selectedTab: 'weather'
                                       });
                     }}
                 >
@@ -73,7 +73,7 @@ class toilet extends Component {
                     selected={this.state.selectedTab === 'setting'}
                     onPress={() => {
                         this.setState({
-                                          selectedTab: 'setting',
+                                          selectedTab: 'setting'
                                       });
                     }}
                 >
