@@ -40,5 +40,15 @@
 
     * [首页模块请求url](http://123.57.39.116:3000/data/read?type=config)
 
+ >## 客户端
+
+##### 地图中自动搜索附近2KM以内的卫生间，提供卫生间基础信息，以及路线导航规划。
+![自动搜索附近](./images/document/map.png)
+#### 文章阅读，包含推荐文章和分类
+![文章阅读](./images/document/read.png)
+#### 当地的实时天气
+![当地的实时天气](./images/document/weather.png)
+#### App Store (iOS 8.0+)  搜索“厕所在哪” 即可下载
+![App Store](./images/document/ios.png)
 >## 架构
-<img src="./images/document/architecture.png"  />
+![架构](./images/document/architecture.png)

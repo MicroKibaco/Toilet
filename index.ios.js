@@ -4,26 +4,24 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
-} from 'react-native';
+import React, {Component} from "react";
+import {AppRegistry, StyleSheet, Text, View} from "react-native";
 
+// 创建一个组件
 export default class toilet extends Component {
+
+    // 渲染视图
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+            欢迎 to React Native!
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.ios.js
+            大家好干啥started, edit index.ios.js
         </Text>
         <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
+            Cmd+R to reload,{'\n'}
           Cmd+D or shake for dev menu
         </Text>
       </View>
@@ -31,6 +29,7 @@ export default class toilet extends Component {
   }
 }
 
+// 样式类
 const styles = StyleSheet.create({
   container: {
     flex: 1,
