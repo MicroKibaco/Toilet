@@ -2,7 +2,7 @@
  * 卫生间组件
  */
 import React, {Component} from "react";
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet, View, WebView} from "react-native";
 
 // A. 实现class的继承
 
@@ -11,8 +11,8 @@ class tolietPage extends Component {
     render() {
 
         return (
-            <View>
-                <Text style={styles.text}>卫生间 </Text>
+            <View style={styles.container}>
+                <WebView source={{uri: 'http://www.baidu.com'}} style={{marginTop: -20}}/>
             </View>
         );
 
@@ -22,8 +22,8 @@ class tolietPage extends Component {
 
 const styles = StyleSheet.create({
 
-                                     text: {
-                                         fontSize: 60
+                                     container: {
+                                         flex: 1
                                      }
 
                                  });
