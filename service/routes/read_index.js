@@ -4,7 +4,7 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     var obj = {
         status: 1,
-        /*推荐专题2个*/
+      /*推荐专题2个*/
         recommendTopic: [
             {
                 img: 'http://7xtp9h.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-04%20%E4%B8%8B%E5%8D%889.19.03.png',
@@ -17,7 +17,7 @@ router.get('/', function (req, res, next) {
                 title: '冬天没眼泪'
             }
         ],
-        /*热门主题8个*/
+      /*热门主题8个*/
         hotTopic: [
             {
                 img: 'http://img02.meituncdn.com/group1/M00/0D/00/wKgyOlWTojeAXM__AAJDPmelESg919_200.jpg',
@@ -60,7 +60,7 @@ router.get('/', function (req, res, next) {
                 url: ''
             }
         ],
-        /*分类*/
+      /*分类*/
         category: [
             {
                 url: 'http://img02.meituncdn.com/group1/M00/C0/BA/wKgyOlcLlT6AdHGgAABNeWvn2lk700_340.jpg',
@@ -83,7 +83,7 @@ router.get('/', function (req, res, next) {
                 text: '管理'
             }
         ],
-        /*其他推荐*/
+      /*其他推荐*/
         other: [
             {
                 img: 'http://img03.meituncdn.com/group1/M00/3B/64/wKgyOlY50zuAXmUuAAETAHil5mo829_375.jpg',
