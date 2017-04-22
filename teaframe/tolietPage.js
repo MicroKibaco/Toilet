@@ -2,7 +2,8 @@
  * 卫生间组件
  */
 import React, {Component} from "react";
-import {StyleSheet, View, WebView} from "react-native";
+import {StyleSheet, View} from "react-native";
+import Mywebview from "./myWebview";
 
 // A. 实现class的继承
 
@@ -12,7 +13,7 @@ class tolietPage extends Component {
 
         return (
             <View style={styles.container}>
-                <WebView source={{uri: 'http://www.baidu.com'}} style={{marginTop: -20}}/>
+                <Mywebview url='http://www.baidu.com'/>
             </View>
         );
 
