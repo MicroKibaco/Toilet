@@ -13,7 +13,8 @@ class tolietPage extends Component {
 
         return (
             <View style={styles.container}>
-                <Mywebview url='http://www.baidu.com'/>
+                <Mywebview
+                    url='http://localhost:63342/toilet/html/nearby.html?_ijt=2uer3pd01rdrkl8p22g8bjfmro'/>
             </View>
         );
 
