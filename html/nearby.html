@@ -83,6 +83,8 @@
         zoom: 15,
     });
 
+    // AMap.PlaceSearch(opts:PlaceSearchOptions )
+
     const locatopnIcon = '<div class="LocaltionIcon">'
                          + ' <img src="../images/map/geolocation.png">' + '</div>';
     const onComplete = function (data) {
@@ -90,7 +92,23 @@
         if (data.info === 'SUCCESS' && data.type === 'complete') {
 
             const pos = data.position;
-            console.log(pos);
+
+            AMap.service(["AMap.PlaceSearch"], function () {
+                const placeSearch = new AMap.PlaceSearch({ //构造地点查询类
+                                                             pageSize: 5,
+                                                             pageIndex: 1,
+                                                             city: "020", // 城市
+                                                             map: map,
+                                                             panel: "panel"
+                                                         });
+                // 关键字查询
+                placeSearch.search('酒店');
+                AMap.event.addListener(placeSearch, 'complete', function (data) {
+
+                    console.log(data);
+
+                });
+            });
 
         } else {
 
