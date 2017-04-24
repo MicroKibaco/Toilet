@@ -249,7 +249,7 @@
                                                            pageIndex: 1,
                                                            /*type: 200300 | 200300 | 200302
                                                             | 200303,*/
-                                                           extensions: 'base'
+                                                           extensions: 'base',
                                                        });
 
                 placeSearch.searchNearBy('卫生间', pos, 2000, function (status, result) {
@@ -286,18 +286,19 @@
 
                             function showInfo() {
                                 // TODO:路径规划
-                                let infowindow = new AMap.InfoWindow({
-                                                                         content: info,
-                                                                         offset: new AMap.Pixel(40,
-                                                                                                -35),
-                                                                         isCustom: true
-                                                                     });
-                                infowindow.open(map, poi.location);
-                                //步行路径规划
-                                walking.clear();
-                                let start = new AMap.LngLat(center[0], center[1]);
-                                let end = poi.location;
-                                walking.search(start, end);
+                                alert('弹出对话框');
+                                /*   let infowindow = new AMap.InfoWindow({
+                                 content: info,
+                                 offset: new AMap.Pixel(40,
+                                 -35),
+                                 isCustom: true
+                                 });
+                                 infowindow.open(map, poi.location);
+                                 //步行路径规划
+                                 walking.clear();
+                                 let start = new AMap.LngLat(center[0], center[1]);
+                                 let end = poi.location;
+                                 walking.search(start, end);*/
                             }
 
                             if (isiPhone && isiPhone.length) {
