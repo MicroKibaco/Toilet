@@ -87,25 +87,29 @@
 
     const locatopnIcon = '<div class="LocaltionIcon">'
                          + ' <img src="../images/map/geolocation.png">' + '</div>';
-    const onComplete = function (data) {
 
+    function doSearch(data) {
         if (data.info === 'SUCCESS' && data.type === 'complete') {
 
             const pos = data.position;
 
             AMap.service(["AMap.PlaceSearch"], function () {
-                const placeSearch = new AMap.PlaceSearch({ //构造地点查询类
-                                                             pageSize: 5,
+                const placeSearch = new AMap.PlaceSearch({
+                                                             pageSize: 10,
                                                              pageIndex: 1,
-                                                             city: "020", // 城市
                                                              map: map,
-                                                             panel: "panel"
                                                          });
-                // 关键字查询
-                placeSearch.search('酒店');
-                AMap.event.addListener(placeSearch, 'complete', function (data) {
 
-                    console.log(data);
+                placeSearch.searchNearBy('卫生间', pos, 2000, function (status, result) {
+
+                    if (result.info === 'OK' && status === 'complete') {
+
+                        console.log(result.poiList.pois);
+
+                    }
+
+                });
+                AMap.event.addListener(placeSearch, 'complete', function (data) {
 
                 });
             });
@@ -115,6 +119,11 @@
             alert('调用地图服务错误或者没有数据');
 
         }
+    }
+    const onComplete = function (data) {
+
+        map.clearMap();
+        doSearch(data);
 
     };
     const onError = function () {
@@ -126,25 +135,25 @@
 
         const tool = new AMap.ToolBar();
         geolocation = new AMap.Geolocation({
-                                               enableHighAccuracy: true,//是否使用高精度定位，默认:true
-                                               timeout: 10000,          //超过10秒后停止定位，默认：无穷大
-                                               maximumAge: 0,           //定位结果缓存0毫秒，默认：0
-                                               convert: true,           //自动偏移坐标，偏移后的坐标为高德坐标，默认：true
-                                               showButton: true,        //显示定位按钮，默认：true
-                                               buttonPosition: 'LB',    //定位按钮停靠位置，默认：'LB'，左下角
-                                               buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
-                                               showMarker: true,        //定位成功后在定位到的位置显示点标记，默认：true
-                                               showCircle: true,        //定位成功后用圆圈表示定位精度范围，默认：true
-                                               panToLocation: true,     //定位成功后将定位到的位置作为地图中心点，默认：true
-                                               zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
-                                               buttonDom: locatopnIcon, // 设置默认图片
+                                               enableHighAccuracy: true,
+                                               timeout: 10000,
+                                               maximumAge: 0,
+                                               convert: true,
+                                               showButton: true,
+                                               buttonPosition: 'LB',
+                                               buttonOffset: new AMap.Pixel(10, 20),
+                                               showMarker: true,
+                                               showCircle: true,
+                                               panToLocation: true,
+                                               zoomToAccuracy: true,
+                                               buttonDom: locatopnIcon,
                                            });
         const scale = new AMap.Scale();
         map.addControl(scale);
         map.addControl(tool);
         map.addControl(geolocation);
-        AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
-        AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+        AMap.event.addListener(geolocation, 'complete', onComplete);// 返回定位信息
+        AMap.event.addListener(geolocation, 'error', onError);      // 返回定位出错信息
 
     });
 
