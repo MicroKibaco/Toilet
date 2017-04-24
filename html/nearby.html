@@ -85,6 +85,25 @@
 
     const locatopnIcon = '<div class="LocaltionIcon">'
                          + ' <img src="../images/map/geolocation.png">' + '</div>';
+    const onComplete = function (data) {
+
+        if (data.info === 'SUCCESS' && data.type === 'complete') {
+
+            const pos = data.position;
+            console.log(pos);
+
+        } else {
+
+            alert('调用地图服务错误或者没有数据');
+
+        }
+
+    };
+    const onError = function () {
+
+        alert('定位失败,亲,确认是否开启定位设置:设置-->隐私-->定位服务-->厕所在哪-->使用定位期间 打开');
+
+    };
     map.plugin(['AMap.ToolBar', 'AMap.Geolocation', "AMap.Scale"], function () {
 
         const tool = new AMap.ToolBar();
@@ -106,10 +125,11 @@
         map.addControl(scale);
         map.addControl(tool);
         map.addControl(geolocation);
-        // AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
-        // AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+        AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+        AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
 
     });
+
 
 </script>
 </body>
