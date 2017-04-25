@@ -185,6 +185,7 @@
         zoom: 15,
     });
 
+    var walking = null;
     // AMap.PlaceSearch(opts:PlaceSearchOptions )
 
     let locatopnIcon = '<div class="LocaltionIcon">'
@@ -194,7 +195,7 @@
         map.clearMap();
         doSearch(data);
 
-        console.log('data', data);
+        //       console.log('data', data);
 
     };
     let onError = function () {
@@ -230,6 +231,11 @@
     function _closeInfoWindow() {
         map.clearInfoWindow();
     }
+    AMap.service('AMap.Walking', function () {
+        walking = new AMap.Walking({
+                                       map: map
+                                   });
+    });
     // TODO:
     // 1)点击marker,展示详细信息的infowindow
     // 2)点击marker,进行路线规划导航
@@ -255,7 +261,7 @@
                                                        });
 
                 placeSearch.searchNearBy('卫生间', pos, 2000, function (status, result) {
-                    console.log(status, result);
+//                    console.log(status, result);
                     if (result.info === 'OK' && status === 'complete') {
 
                         let pois = result.poiList.pois;
@@ -289,17 +295,17 @@
                             function showInfo() {
                                 // TODO:路径规划
                                 let infowindow = new AMap.InfoWindow({
-                                 content: info,
-                                 offset: new AMap.Pixel(40,
-                                 -35),
-                                 isCustom: true
-                                 });
-                                 infowindow.open(map, poi.location);
-                                /*  //步行路径规划
-                                 walking.clear();
-                                 let start = new AMap.LngLat(center[0], center[1]);
-                                 let end = poi.location;
-                                 walking.search(start, end);*/
+                                                                         content: info,
+                                                                         offset: new AMap.Pixel(40,
+                                                                                                -35),
+                                                                         isCustom: true
+                                                                     });
+                                infowindow.open(map, poi.location);
+                                //步行路径规划
+                                walking.clear();
+                                let start = pos;
+                                let end = poi.location;
+                                walking.search(start, end);
                             }
 
                             if (isiPhone && isiPhone.length) {
@@ -328,7 +334,10 @@
         }
     }
 
-
+    // 防止点击
+    document.querySelector('a.amap-logo').onclick = function () {
+        return false;
+    };
 </script>
 </body>
 </html>
