@@ -227,7 +227,9 @@
         AMap.event.addListener(geolocation, 'error', onError);      // 返回定位出错信息
 
     });
-
+    function _closeInfoWindow() {
+        map.clearInfoWindow();
+    }
     // TODO:
     // 1)点击marker,展示详细信息的infowindow
     // 2)点击marker,进行路线规划导航
@@ -286,15 +288,14 @@
 
                             function showInfo() {
                                 // TODO:路径规划
-                                alert('弹出对话框');
-                                /*   let infowindow = new AMap.InfoWindow({
+                                let infowindow = new AMap.InfoWindow({
                                  content: info,
                                  offset: new AMap.Pixel(40,
                                  -35),
                                  isCustom: true
                                  });
                                  infowindow.open(map, poi.location);
-                                 //步行路径规划
+                                /*  //步行路径规划
                                  walking.clear();
                                  let start = new AMap.LngLat(center[0], center[1]);
                                  let end = poi.location;
