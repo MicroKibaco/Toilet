@@ -2,7 +2,9 @@
  * 搜索
  */
 import React, {Component} from "react";
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet, TextInput, View} from "react-native";
+
+import Utils from "./../utils";
 
 // A. 实现class的继承
 
@@ -11,8 +13,9 @@ class search extends Component {
     render() {
 
         return (
-            <View>
-                <Text style={styles.text}>搜索 </Text>
+            <View style={styles.container}>
+                <TextInput style={styles.search_input} placeholder='搜索'
+                           placeholderTextColor='#5e6877'></TextInput>
             </View>
         );
 
@@ -22,8 +25,23 @@ class search extends Component {
 
 const styles = StyleSheet.create({
 
-                                     text: {
-                                         fontSize: 20
+                                     container: {
+
+                                         paddingLeft: 10,
+                                         paddingRight: 10,
+                                         marginTop: 20,
+
+                                     },
+
+                                     search_input: {
+
+                                         height: 35,
+                                         borderWidth: Utils.pixel,
+                                         paddingLeft: 5,
+                                         borderColor: "#EEEEEE",
+                                         borderRadius: 3,
+                                         fontSize: 15,
+
                                      }
 
                                  });

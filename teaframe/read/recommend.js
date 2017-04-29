@@ -12,7 +12,17 @@ class recommend extends Component {
 
         return (
             <View>
-                <Text style={styles.text}>推荐 </Text>
+                <View>
+                    <Text>推荐专题</Text>
+                </View>
+
+                <View>
+                    <View></View>
+                    <View></View>
+                </View>
+                <View>
+                    <Text>查看更多同期专题</Text>
+                </View>
             </View>
         );
 
@@ -20,13 +30,7 @@ class recommend extends Component {
 
 }
 
-const styles = StyleSheet.create({
-
-                                     text: {
-                                         fontSize: 20
-                                     }
-
-                                 });
+const styles = StyleSheet.create({});
 
 // B. 提供组件导入方式
 module.exports = recommend;

@@ -18,6 +18,7 @@ Utils.get('http://123.57.39.116:3000/data/read?type=cookies', function (data) {
     alert(err);
 
 });
+// http://localhost:63342/toilet/html/nearby.html?_ijt=untcjt5036pm9d12udi9d4u24e
 class tolietPage extends Component {
 
     render() {
@@ -25,7 +26,7 @@ class tolietPage extends Component {
         return (
             <View style={styles.container}>
                 <Mywebview
-                    url='http://localhost:63342/toilet/html/nearby.html?_ijt=untcjt5036pm9d12udi9d4u24e'/>
+                    url='http://www.baidu.com'/>
             </View>
         );
 

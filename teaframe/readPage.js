@@ -7,10 +7,22 @@ import Category from "./read/category";
 import Topic from "./read/topic";
 import Search from "./read/search";
 import Recommend from "./read/recommend";
+import Hr from "./read/hr";
 
 // A. 实现class的继承
 
 class readPage extends Component {
+
+    // 构造
+    constructor(props) {
+        super(props);
+        // 初始状态
+        this.state = {
+
+            isShow: false
+
+        };
+    }
 
     render() {
 
@@ -18,16 +30,30 @@ class readPage extends Component {
 
             <View>
                 <Search/>
-                <ScrollView>
+                <Hr/>
+                {
+                    this.state.isShow ? <ScrollView>
 
-                    <Topic/>
-                    <Recommend/>
-                    <Category/>
-                    <Recommend/>
-                </ScrollView>
+                        <Topic/>
+                        <Recommend/>
+                        <Category/>
+                        <Recommend/>
+                    </ScrollView> : null
+                }
+
 
             </View>
         );
+
+    }
+
+    // TODO: featch 数据
+    componentDidMount() {
+
+        this.setState({
+
+                          isShow: true
+                      });
 
     }
 
