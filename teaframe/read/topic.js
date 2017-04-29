@@ -1,26 +1,18 @@
 /**
- * 阅读组件
+ * 推荐专题
  */
 import React, {Component} from "react";
-import {StyleSheet, View} from "react-native";
-import Category from "./read/category";
-import Topic from "./read/topic";
-import Search from "./read/search";
-import Recommend from "./read/recommend";
+import {StyleSheet, Text, View} from "react-native";
 
 // A. 实现class的继承
 
-class readPage extends Component {
+class topic extends Component {
 
     render() {
 
         return (
             <View>
-                <Search/>
-                <Topic/>
-                <Category/>
-                <Recommend/>
-
+                <Text style={styles.text}>推荐专题 </Text>
             </View>
         );
 
@@ -37,4 +29,4 @@ const styles = StyleSheet.create({
                                  });
 
 // B. 提供组件导入方式
-module.exports = readPage;
+module.exports = topic;
