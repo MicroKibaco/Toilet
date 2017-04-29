@@ -2,7 +2,7 @@
  * 阅读组件
  */
 import React, {Component} from "react";
-import {StyleSheet, View} from "react-native";
+import {ScrollView, StyleSheet, View} from "react-native";
 import Category from "./read/category";
 import Topic from "./read/topic";
 import Search from "./read/search";
@@ -15,11 +15,16 @@ class readPage extends Component {
     render() {
 
         return (
+
             <View>
                 <Search/>
-                <Topic/>
-                <Category/>
-                <Recommend/>
+                <ScrollView>
+
+                    <Topic/>
+                    <Recommend/>
+                    <Category/>
+                    <Recommend/>
+                </ScrollView>
 
             </View>
         );
