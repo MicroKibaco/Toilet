@@ -16,7 +16,7 @@ class topic extends Component {
 
             <View style={styles.container}>
                 <View>
-                    <Text style={styles.text1}>专题</Text>
+                    <Text style={styles.text1}>推荐专题</Text>
                 </View>
 
                 <View style={styles.img_view}>
@@ -72,9 +72,9 @@ const styles = StyleSheet.create({
                                          fontSize: 13,
                                          marginTop: 10,
                                          fontWeight: '300',
-                                         marginBottom: 10,
+                                         /*marginBottom: 10,*/
 
-                                     }
+                                     },
 
                                  });
 

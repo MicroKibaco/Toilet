@@ -2,7 +2,7 @@
  * 阅读组件
  */
 import React, {Component} from "react";
-import {ScrollView, StyleSheet, View} from "react-native";
+import {NavigatorIOS, ScrollView, StyleSheet, View} from "react-native";
 import Category from "./read/category";
 import Topic from "./read/topic";
 import Search from "./read/search";
@@ -11,7 +11,7 @@ import Hr from "./read/hr";
 
 // A. 实现class的继承
 
-class readPage extends Component {
+class readView extends Component {
 
     // 构造
     constructor(props) {
@@ -28,13 +28,14 @@ class readPage extends Component {
 
         return (
 
-            <View>
+            <View style={styles.container}>
                 <Search/>
                 <Hr/>
                 {
-                    this.state.isShow ? <ScrollView>
+                    this.state.isShow ? <ScrollView style={styles.container}>
 
                         <Topic/>
+                        <Hr/>
                         <Recommend/>
                         <Category/>
                         <Recommend/>
@@ -59,13 +60,32 @@ class readPage extends Component {
 
 }
 
+class read extends Component {
+
+    render() {
+
+        return (
+            <NavigatorIOS
+                initialRoute={{
+                    component: readView,
+                    title: '阅读',
+                    navigationBarHidden: true,
+                }}
+                style={{flex: 1}}
+            />
+        );
+
+    }
+
+}
+
 const styles = StyleSheet.create({
 
-                                     text: {
-                                         fontSize: 20
+                                     container: {
+                                         flex: 1
                                      }
 
                                  });
 
 // B. 提供组件导入方式
-module.exports = readPage;
+module.exports = read;

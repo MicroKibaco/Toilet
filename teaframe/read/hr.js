@@ -27,9 +27,11 @@ class hr extends Component {
 const styles = StyleSheet.create({
 
                                      hr: {
-                                         borderColor: '#F0F0F0',
-                                         borderRadius: Utils.pixel,
-                                         marginTop: 10,
+                                         borderWidth: Utils.pixel,
+                                         borderColor: '#ccc',
+                                         marginTop: 20,
+                                         marginBottom: 10,
+
                                      }
 
                                  });
