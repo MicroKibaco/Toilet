@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
                                      text2: {
                                          marginTop: 4,
                                          fontSize: 14,
-                                         color: '#818181'
+                                         color: '#818181',
                                      },
 
                                  });

@@ -37,7 +37,9 @@ class readView extends Component {
                         <Topic/>
                         <Hr/>
                         <Recommend/>
+                        <Hr/>
                         <Category/>
+                        <Hr/>
                         <Recommend/>
                     </ScrollView> : null
                 }

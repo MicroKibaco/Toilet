@@ -31,10 +31,13 @@ const styles = StyleSheet.create({
                                          borderColor: '#ccc',
                                          marginTop: 20,
                                          marginBottom: 10,
+                                         marginLeft: 10,
+                                         marginRight: 10,
 
                                      }
 
-                                 });
+                                 })
+;
 
 // B. 提供组件导入方式
 module.exports = hr;
