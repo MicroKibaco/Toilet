@@ -37,11 +37,11 @@ class readView extends Component {
 
                         <Topic data={this.state.recommendTopic}/>
                         <Hr/>
-                        <Recommend />
+                        <Recommend name="热门推荐" data={this.state.hotTopic}/>
                         <Hr/>
-                        <Category />
+                        <Category data={this.state.category}/>
                         <Hr/>
-                        <Recommend />
+                        <Recommend name="清新一刻" data={this.state.other}/>
                     </ScrollView> : null
                 }
 
