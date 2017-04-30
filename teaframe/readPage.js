@@ -57,7 +57,7 @@ class readView extends Component {
         let that = this;
         // http://localhost:3000/data/read?type=config 本机环境
         // http://123.57.39.116:3000/data/read?type=config // 线上环境
-        Utils.get('http://123.57.39.116:3000/data/read?type=config', function (data) {
+        Utils.get('http://192.168.23.70:3000/data/read?type=config', function (data) {
 
             if (data.status === 1) {
                 let obj = data.data;
