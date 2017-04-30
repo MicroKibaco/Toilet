@@ -16,7 +16,7 @@ class category extends Component {
         super(props);
         // 初始状态
         this.state = {
-            data: props.data,
+            data: props.data
         };
     }
 

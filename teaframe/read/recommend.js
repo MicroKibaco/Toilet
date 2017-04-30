@@ -15,6 +15,7 @@ class recommend extends Component {
         // 初始状态
         this.state = {
             data: props.data,
+            name: props.name,
         };
     }
 
