@@ -11,37 +11,52 @@ import Utils from "./../utils";
 // A. 实现class的继承
 
 class category extends Component {
+// 构造
+    constructor(props) {
+        super(props);
+        // 初始状态
+        this.state = {
+            data: props.data,
+        };
+    }
 
     render() {
+
+        let data = this.state.data;
+        let views1 = [];
+        let views2 = [];
+        for (let i in data) {
+
+            if (data.hasOwnProperty(i)) {
+
+                let item = (<View style={styles.row_item} key={i}>
+                    <View style={styles.item}>
+                        <Text style={styles.title}>{data[i].text}</Text>
+                    </View>
+                </View>);
+
+                if (i < 2) {
+
+                    views1.push(item);
+
+                } else {
+
+                    views2.push(item);
+
+                }
+
+            }
+        }
 
         return (
             <View style={styles.container}>
                 <Text style={styles.text1}>分类 </Text>
                 <View style={styles.row}>
-                    <View style={styles.row_item}>
-                        <View style={styles.item}>
-                            <Text style={styles.title}>互联网</Text>
-                        </View>
-                    </View>
-                    <View style={styles.row_item}>
-                        <View style={styles.item}>
-                            <Text style={styles.title}>散文</Text>
-                        </View>
-                    </View>
+                    {views1}
 
                 </View>
                 <View style={styles.row}>
-                    <View style={styles.row_item}>
-                        <View style={styles.item}>
-                            <Text style={styles.title}>笑话</Text>
-                        </View>
-                    </View>
-                    <View style={styles.row_item}>
-                        <View style={styles.item}>
-                            <Text style={styles.title}>管理</Text>
-                        </View>
-                    </View>
-
+                    {views2}
                 </View>
             </View>
         );
