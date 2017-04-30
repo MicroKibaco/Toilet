@@ -14,7 +14,6 @@ class recommend extends Component {
         super(props);
         // 初始状态
         this.state = {
-            name: props.name,
             data: props.data,
         };
     }

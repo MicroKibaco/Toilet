@@ -33,7 +33,7 @@ class readView extends Component {
                 <Search/>
                 <Hr/>
                 {
-                    this.state.isShow ? <ScrollView style={[styles.container, {paddingTop: 10}]}>
+                    this.state.isShow ? <ScrollView style={styles.container}>
 
                         <Topic data={this.state.recommendTopic}/>
                         <Hr/>
