@@ -8,6 +8,7 @@ import Topic from "./read/topic";
 import Search from "./read/search";
 import Recommend from "./read/recommend";
 import Hr from "./read/hr";
+import Utils from "./utils";
 
 // A. 实现class的继承
 
@@ -32,15 +33,15 @@ class readView extends Component {
                 <Search/>
                 <Hr/>
                 {
-                    this.state.isShow ? <ScrollView style={styles.container}>
+                    this.state.isShow ? <ScrollView style={[styles.container, {paddingTop: 10}]}>
 
-                        <Topic/>
+                        <Topic data={this.state.recommendTopic}/>
                         <Hr/>
-                        <Recommend/>
+                        <Recommend />
                         <Hr/>
-                        <Category/>
+                        <Category />
                         <Hr/>
-                        <Recommend/>
+                        <Recommend />
                     </ScrollView> : null
                 }
 
@@ -53,10 +54,31 @@ class readView extends Component {
     // TODO: featch 数据
     componentDidMount() {
 
-        this.setState({
+        let that = this;
+        // http://localhost:3000/data/read?type=config 本机环境
+        // http://123.57.39.116:3000/data/read?type=config // 线上环境
+        Utils.get('http://123.57.39.116:3000/data/read?type=config', function (data) {
 
-                          isShow: true
-                      });
+            if (data.status === 1) {
+                let obj = data.data;
+                let hotTopic = obj.hotTopic;
+                let other = obj.other;
+                let category = obj.category;
+                let recommendTopic = obj.recommendTopic;
+                that.setState({
+                                  isShow: true,
+                                  recommendTopic: recommendTopic,
+                                  category: category,
+                                  other: other,
+                                  hotTopic: hotTopic,
+                              });
+            } else {
+
+            }
+
+        }, function (err) {
+
+        })
 
     }
 
