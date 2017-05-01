@@ -73,7 +73,7 @@ class category extends Component {
                                       title: name,
                                       barTintColor: '#fff',
                                       passProps: {
-                                          url: ''
+                                          url: url
                                       },
                                   });
 

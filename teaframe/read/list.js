@@ -13,12 +13,12 @@ class list extends Component {
     constructor(props) {
         super(props);
         // 初始状态
-        //   console.log(props.url);
+        console.log(props.url);
         this.state = {
-            url: props.url
+            url: props.url,
         };
 
-    }
+    };
 
     render() {
 
@@ -36,10 +36,22 @@ class list extends Component {
             </View>
         );
 
-    }
+    };
+
+    componentDidMount() {
+
+        let url = this.state.url;
+        Utils.get(this.state.url, function (data) {
+
+            console.log(data);
+
+        }, function (err) {
+
+        });
+
+    };
 
 }
-
 const styles = StyleSheet.create({
 
                                      item: {

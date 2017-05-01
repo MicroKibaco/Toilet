@@ -4,11 +4,10 @@
 import React, {Component} from "react";
 import {StyleSheet, View} from "react-native";
 import Mywebview from "./myWebview";
-import Utils from "./utils";
 
 // A. 实现class的继承
-console.log(Utils.size);
-console.log(Utils.pixel);
+// console.log(Utils.size);
+// console.log(Utils.pixel);
 /*Utils.get('http://123.57.39.116:3000/data/read?type=cookies', function (data) {
 
     console.log(data);

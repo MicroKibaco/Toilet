@@ -22,7 +22,7 @@ class topic extends Component {
 
         let views = [];
         let data = this.state.data;
-        console.log(data);
+        // console.log(data);
 
         for (let i in data) {
             if (data.hasOwnProperty(i)) {
