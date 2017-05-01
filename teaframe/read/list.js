@@ -2,7 +2,7 @@
  * 列表.
  */
 import React, {Component} from "react";
-import {Image, StyleSheet, Text, View} from "react-native";
+import {Image, ListView, StyleSheet, Text, View} from "react-native";
 import Utils from "./../utils";
 
 // A. 实现class的继承
@@ -13,9 +13,10 @@ class list extends Component {
     constructor(props) {
         super(props);
         // 初始状态
-        console.log(props.url);
+        const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
         this.state = {
             url: props.url,
+            dataSource: ds.cloneWithRows([]),
         };
 
     };
@@ -23,17 +24,21 @@ class list extends Component {
     render() {
 
         return (
-            <View>
-                <View style={styles.item}>
+            <ListView
+                enableEmptySections={true}
+                dataSource={this.state.dataSource}
+                renderRow={(rowData) => (<View style={styles.item}>
                     <View>
-                        <Image source={{uri: ''}}/>
+                        <Image resizeMethod='scale' style={styles.img}
+                               source={{uri: rowData.img}}/>
                     </View>
-                    <View>
-                        <Text>标题</Text>
-                        <Text>2017-05-01</Text>
+                    <View style={styles.text_wraper}>
+                        <Text style={styles.title}
+                              numberOfLines={1}>{rowData.title}</Text>
+                        <Text style={styles.time}>{rowData.time}</Text>
                     </View>
-                </View>
-            </View>
+                </View>)}
+            />
         );
 
     };
@@ -41,12 +46,22 @@ class list extends Component {
     componentDidMount() {
 
         let url = this.state.url;
-        Utils.get(this.state.url, function (data) {
+        let that = this;
+        let ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 
-            console.log(data);
+        Utils.get(url, function (data) {
+            if (data.status) {
+                let obj = data.data;
+                that.setState({
+                                  dataSource: ds.cloneWithRows(obj),
+                              });
 
+            } else {
+                alert('服务异常,紧急修复,请耐心等待!');
+            }
         }, function (err) {
-
+            alert('服务异常,紧急修复,请耐心等待!');
+            console.log(err);
         });
 
     };
@@ -61,8 +76,36 @@ const styles = StyleSheet.create({
                                          paddingRight: 10,
                                          borderBottomColor: '#EDEDED',
                                          borderBottomWidth: Utils.pixel,
+                                         flexDirection: 'row',
 
-                                     }
+                                     },
+
+                                     img: {
+                                         width: 60,
+                                         height: 60,
+                                         borderRadius: 3,
+                                         marginTop: 7,
+                                     },
+
+                                     text_wraper: {
+                                         marginLeft: 6,
+                                         flex: 1,
+
+                                     },
+
+                                     title: {
+
+                                         fontSize: 16,
+                                         marginTop: 10,
+
+                                     },
+                                     time: {
+
+                                         color: '#DDDDDD',
+                                         fontSize: 13,
+                                         marginTop: 5,
+
+                                     },
 
                                  });
 
