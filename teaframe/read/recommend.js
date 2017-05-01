@@ -2,8 +2,9 @@
  * 推荐
  */
 import React, {Component} from "react";
-import {Image, StyleSheet, Text, View} from "react-native";
+import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import Utils from "./../utils";
+import MyWebView from "./../myWebview";
 
 // A. 实现class的继承
 
@@ -26,14 +27,16 @@ class recommend extends Component {
         let views1 = [];
         let views2 = [];
         for (let i in data) {
-
             if (data.hasOwnProperty(i)) {
-                let item = (<View style={styles.img_item} key={i}>
+                let page = data[i];
+                let item = (<TouchableOpacity style={styles.img_item} key={i}
+                                              onPress={this._onShowWebPage.bind(this, page.url,
+                                                                                page.title)}>
                     <Image resizeMethod='scale' style={[styles.img, styles.shadow]}
-                           source={{uri: data[i].img} }/>
-                    <Text style={styles.text2} numberOfLines={2}>{data[i].title}</Text>
+                           source={{uri: page.img} }/>
+                    <Text style={styles.text2} numberOfLines={2}>{page.title}</Text>
 
-                </View>);
+                </TouchableOpacity>);
                 if (i < 4) {
 
                     views1.push(item);
@@ -58,6 +61,21 @@ class recommend extends Component {
                 </View>
             </View>
         );
+
+    }
+
+    _onShowWebPage(url, title) {
+
+        this.props.navigator.push({
+
+                                      component: MyWebView,
+                                      url: url,
+                                      title: title,
+                                      passProps: {
+                                          url: url
+                                      },
+
+                                  });
 
     }
 

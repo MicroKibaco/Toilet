@@ -23,16 +23,16 @@ class topic extends Component {
 
         let views = [];
         let data = this.state.data;
-        // console.log(data);
 
         for (let i in data) {
             if (data.hasOwnProperty(i)) {
+                let page = data[i];
                 views.push(
                     <TouchableOpacity style={styles.img_item} key={i}
-                                      onPress={this._onShowWebPage.bind(this, data[i].url,
-                                                                        data[i].title)}>
+                                      onPress={this._onShowWebPage.bind(this, page.url,
+                                                                        page.title)}>
                         <Image resizeMethod='scale' style={styles.img}
-                               source={{uri: data[i].img} }/>
+                               source={{uri: page.img} }/>
                     </TouchableOpacity>
                 );
             }

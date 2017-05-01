@@ -2,8 +2,9 @@
  * 列表.
  */
 import React, {Component} from "react";
-import {Image, ListView, StyleSheet, Text, View} from "react-native";
+import {Image, ListView, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import Utils from "./../utils";
+import MyWebView from "./../myWebview";
 
 // A. 实现class的继承
 
@@ -17,6 +18,7 @@ class list extends Component {
         this.state = {
             url: props.url,
             dataSource: ds.cloneWithRows([]),
+            navigator: props.navigator,
         };
 
     };
@@ -27,7 +29,10 @@ class list extends Component {
             <ListView
                 enableEmptySections={true}
                 dataSource={this.state.dataSource}
-                renderRow={(rowData) => (<View style={styles.item}>
+                renderRow={(rowData) => (<TouchableOpacity style={styles.item}
+                                                           onPress={this._onShowWebPage.bind(this,
+                                                                                             rowData.url,
+                                                                                             rowData.title)}>
                     <View>
                         <Image resizeMethod='scale' style={styles.img}
                                source={{uri: rowData.img}}/>
@@ -37,11 +42,24 @@ class list extends Component {
                               numberOfLines={1}>{rowData.title}</Text>
                         <Text style={styles.time}>{rowData.time}</Text>
                     </View>
-                </View>)}
+                </TouchableOpacity>)}
             />
         );
 
     };
+
+    _onShowWebPage(url, title) {
+
+        this.state.navigator.push({
+
+                                      component: MyWebView,
+                                      title: title,
+                                      passProps: {
+                                          url: url
+                                      },
+                                  });
+
+    }
 
     componentDidMount() {
 

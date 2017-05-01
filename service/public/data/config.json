@@ -1,56 +1,56 @@
 {
   "recommendTopic": [
     {
-      "img": "http://img.netbian.com/file/2015/0731/4c7185d5007dcc3974f81688c7f3c744.jpg",
-      "url": "http://www.asiainfo.com.cn/visit.html?menuId=ff8080815438176601543d03639e0001&artId=ff80808155b8fbf00156a1964c060005",
-      "title": "亚信观点"
+      "img": "https://developer.android.com/images/home/nougat_bg_2x.jpg",
+      "url": "https://developer.android.com/index.html",
+      "title": "Android Developer官方文档"
     },
     {
-      "img": "http://img.netbian.com/file/2016/0311/4d56d8e5f4b11f58fd0740aa5860d11a.jpg",
-      "url": "http://www.asiainfo.com.cn/visit.html?menuId=4028863a4a13dbaa014a13faaf020001&artId=ff80808157f542350159735b243b0001",
-      "title": "亚信携大数据创新应用出席第三届世界互联网大会"
+      "img": "http://www.android-dev.cn/images/home/l-hero_2x.png",
+      "url": "http://reactnative.cn/docs/0.43/getting-started.html",
+      "title": "React Native 中文官网"
     }
   ],
   "hotTopic": [
     {
-      "img": "http://img.netbian.com/file/20131101/ca7a75e8d30b4caa2b0a3d0fe10061b0.jpg",
-      "title": "Android 手把手教您自定义ViewGroup（一）",
-      "url": "https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=10&appmsgid=100000002&token=2023024207&lang=zh_CN"
+      "img": "http://desk.fd.zol-img.com.cn/t_s720x360c5/g5/M00/0F/0F/ChMkJ1iip4SIclhdAD3KtD_jZ6IAAZ8GwBKKZcAPcrM240.png",
+      "title": "我认真起来连面试官都怕（块级作用域，事件代理）",
+      "url": "https://juejin.im/post/58fc8594a0bb9f0065bf806e?utm_source=gold_browser_extension"
     },
     {
-      "img": "http://img.netbian.com/file/20150123/8b57ac7ebf128165d55a8830de9762fc.jpg",
-      "title": "Android 如何编写基于编译时注解的项目",
-      "url": "https://mp.weixin.qq.com/cgi-bin/appmsg?t=media/appmsg_edit&action=edit&type=10&appmsgid=100000002&token=2023024207&lang=zh_CN"
+      "img": "http://www.asiainfo.com.cn/xtheme/1.0.1/default/images/con_pic11.png",
+      "title": "React全家桶写一个CNode社区，奉上心得与源码",
+      "url": "https://juejin.im/post/5902c98fda2f60005def88a2?utm_source=gold_browser_extension"
     },
     {
-      "img": "http://img.netbian.com/file/20130421/2092dbbfb4fe2b87c863ce9fb76382ea.jpg",
-      "title": "乡党第十 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI02JkGnXTMRaK4CRL6hh6r72McDlzCWC%2Fp1M8U8%2FF4kexmBwJTpaDlTf4E096j5sK6ZTczNzA802Z7CyHrP2WKO5WRcHMaGK1q47%2BRk80WFWrQ%3D%3D&chksm=7b73dcc94c0455df6457b190d317cbebad22248e41e1d28b01b132f74a77cc2b11429069d5f8#rd"
+      "img": "http://img.netbian.com/file/2017/0417/b6965d8ac2208c5c28d3d772f1b774eb.jpg",
+      "title": "Vue全家桶实现还原豆瓣电影wap版",
+      "url": "https://juejin.im/post/58fc5bb00ce46300612c86d4?utm_source=gold_browser_extension"
     },
     {
-      "img": "http://img.netbian.com/file/2015/1013/aa8ae2ec03b832c6d82bf0a36d96e5ba.jpg",
-      "title": "卫灵公十四",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI003kkWXuuKUQgeAHnfr8Wia16M3kjo0XWRfe4YkWPQRYX6Ibx0DihVyNZC3p%2BD8hXZTczNzA802Z7CyHrP2WKO5j4SL7TSuA5Ha%2BQmB28ccPw%3D%3D&chksm=7b73dcd84c0455cea260d25f620105c798bffa69c6685b6db895570ef27bf09f51f959f7cdc5#rd"
+      "img": "http://img.netbian.com/file/2017/0428/5d4b90bcc3941daf03997a43e9151971.jpg",
+      "title": "【深度长文】JavaScript数组所有API全解密",
+      "url": "https://juejin.im/post/5902d56e1b69e60058c634d6?utm_source=gold_browser_extension"
     },
     {
-      "img": "http://img.netbian.com/file/20110614/76d20470b1e2aee043a13753a306937b.jpg",
-      "title": "先进第十一 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI00is5AaGXIfrX0kVl1wyLHFqu077RJyNSHhOEybI22TeXTjfIKWIFgxD5sRsmq6HO5TczNzA802Z7CyHrP2WKO5MhqMl9xAB18iKm8T%2F2uyow%3D%3D&chksm=7b73dccb4c0455dd88661aa71ca77c0a0fdc1e47024e28e3062ffcc75d8a01a36539d9c808cb#rd"
+      "img": "http://img.netbian.com/file/20130419/ea3349d06acf3afc03a59e6ba9b63afb.jpg",
+      "title": "活儿好又性感的在线 Mock 平台 - Easy Mock",
+      "url": "https://juejin.im/post/58ff1fae61ff4b0066792f6e?utm_source=gold_browser_extension"
     },
     {
-      "img": "http://img.netbian.com/file/20110307/eadb219d4694c487e3a0fbbec4ebf91c.jpg",
-      "title": "颜渊第十二 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI00kf1gHBywJLpvS9tW2ZxMUXgJMMT7PD5SAioNB7iSCqg7mk%2BxpB2Z%2FEJAggrp261tTczNzA802Z7CyHrP2WKO5V9xV5vS4WkBLTHnP%2BsEUXg%3D%3D&chksm=7b73dcc54c0455d39403a82fc3cce298015e8a00a2ab4376dc7ff04397e12e9727c12220da50#rd"
+      "img": "http://img.netbian.com/file/2017/0422/db28d32c2cdab579aba0b154ee61e61f.jpg",
+      "title": "深入理解ES6中的箭头函数",
+      "url": "https://microzz.com/2017/04/29/arrowfunc/"
     },
     {
-      "img": "http://img.netbian.com/file/2015/1209/50605101d6d518f3fb10e1970c27988c.jpg",
-      "title": "子路第十三 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI008ElYyWDQdE%2Bq9jdVkPCzEFs7TNQIMObE0Z1is6eZ%2FyzsQnGtuaoMzE87MmaqbWnlTczNzA802Z7CyHrP2WKO5QWdyUdjp5P%2B%2FvK7JKS6f9w%3D%3D&chksm=7b73dcc74c0455d1d238df8c48967b485a7de95e45ffeb410a596654ed5600fc50a4b84ca303#rd"
+      "img": "http://reactnative.cn/static/img/chrome_breakpoint.png",
+      "title": "React Native 中文网",
+      "url": "http://reactnative.cn/"
     },
     {
-      "img": "http://img.netbian.com/file/2016/0217/66db121434f3f663f120e1635bdd4d4a.jpg",
-      "title": "宪问第十四 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI03nvRoYYoWnUDh6DyWEfioS027LbWXUBxLHR4xgifpGgh3opgcUXJewargtFNGDra1TczNzA802Z7CyHrP2WKO56jkzf8DL2G5xG5d4%2BuHBZQ%3D%3D&chksm=7b73dcc14c0455d7f751617a4aad9dd3b8595966826f12195e8263fcc99e13f0c8317d283547#rd"
+      "img": "http://es6.ruanyifeng.com/images/cover_thumbnail.jpg",
+      "title": "ECMAScript 6 入门",
+      "url": "http://es6.ruanyifeng.com/#README"
     }
   ],
   "category": [
@@ -70,43 +70,43 @@
   "other": [
     {
       "img": "http://img.netbian.com/file/2016/1226/08e360f36be8182b1006624f5ea31cb4.jpg",
-      "title": "季氏第十六 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI03hGlJSPFlK0SbBNqdFEXhzSf8HmxuNZO8X7qxg%2BsaOZL9UAU%2Bry2OgULw4heXBl7RTczNzA802Z7CyHrP2WKO5lj5rwNJgQmWJcvgiLxuMjQ%3D%3D&chksm=7b73dcc34c0455d5ed291a094dd81cae4fc4ec7514d00f8c56d48cc6c81e9eb54f01aa8cf080#rd"
+      "title": " React Native for Android 异常处理概览 ",
+      "url": "https://mp.weixin.qq.com/s/aWuenpGOKug4fovT5uKXTQ"
     },
     {
       "img": "http://img.netbian.com/file/2015/1225/a5644d4ae5fd87f68a0c7eb53dc526a6.jpg",
-      "title": "尧曰第二十 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI01uplXNrHlWvISYkfgXUa5vwxNslfGlrxN8%2BnzlZG3nScT7Ag%2FQ5jNKJqfAW69ttotTczNzA802Z7CyHrP2WKO5%2BH5f2Ch2XzKmsU%2B8kHYpyA%3D%3D&chksm=7b73dcc24c0455d40003fcbdcd82999a93296723a5a97b26e896b1e5f1b7b892425c5c0261af#rd"
+      "title": " GDE专栏 | Android与Android Things，父子还是兄弟？ ",
+      "url": "https://mp.weixin.qq.com/s/MZP1H6xBuZBADJe6MhwHug"
     },
     {
       "img": "http://img.netbian.com/file/2015/1226/00aa135b6e2330b24dd9dd2c420dba8c.jpg",
-      "title": "子张第十九 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI00qOdyMOzJPx939U6uhNvMV0z1mNEUpJkM4elrpDef7RFBCkykqEzaRmyiq1QtmQsdTczNzA802Z7CyHrP2WKO5V6EWHT4JXNowbV1MDQ9DNw%3D%3D&chksm=7b73dcdf4c0455c91a89442597391e0b009ce413db7a4873447a2237d1ed40bd0761f9bdf421#rd"
+      "title": " 那些年，我们一起写的单例模式 ",
+      "url": "https://mp.weixin.qq.com/s/pixuEDQ_OZ0RFjciTThKlQ"
     },
     {
-      "img": "http://img.netbian.com/file/20110619/c93fd13e1cde2ba56badfcdcb2639f61.jpg",
-      "title": "微子第十八 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI00G7Vt1x9cUwfHUjeh5LozCHBFmLAh5VJQi%2FpS%2FTo24Ekg6nhOv0UBA289x4PhpcNJTczNzA802Z7CyHrP2WKO5Hc3JNj5W3Wbu7NaXMKFyxw%3D%3D&chksm=7b73dcde4c0455c8a610e9c271606917ad76bdc3dcc644016a75c25dbf8d670979dcd59bdfdc#rd"
+      "img": "http://lookcode-wordpress.stor.sinaapp.com/uploads/2016/01/103.jpg",
+      "title": "React Native库版本升级(Upgrading)与降级讲解",
+      "url": "http://www.lcode.org/%E3%80%90react-native%E5%BC%80%E5%8F%91%E3%80%91react-native%E5%BA%93%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7upgrading%E4%B8%8E%E9%99%8D%E7%BA%A7%E8%AE%B2%E8%A7%A3/"
     },
     {
       "img": "http://img.netbian.com/file/20141219/3e55ebc30a35945de6c632dad5588dfd.jpg",
-      "title": "述而第七 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI011FMtMs8owZE9TikS9T04vyrpF6%2BVaiLd%2FwelF4n8PPj4wmRIPX2YdKQb4ZeV8%2F8BTczNzA802Z7CyHrP2WKO5D9NbK9B1A5gLShwtIczTIA%3D%3D&chksm=7b73dccd4c0455db4e516eeec61d61ea818b28aa7440ce5667b011e0fdfd8ef86575d750eef2#rd"
+      "title": " 手机QQ Hybrid 的架构演进 ",
+      "url": "https://mp.weixin.qq.com/s/J_7uiET3p7MfJTq5m59AUw"
     },
     {
       "img": "http://img.netbian.com/file/20110227/072cffb584b279f91737369aa8602869.jpg",
-      "title": "先进第十一 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI00is5AaGXIfrX0kVl1wyLHFqu077RJyNSHhOEybI22TeXTjfIKWIFgxD5sRsmq6HO5TczNzA802Z7CyHrP2WKO5oIyxYRe0LuFHfHhPD4tJfw%3D%3D&chksm=7b73dccb4c0455dd88661aa71ca77c0a0fdc1e47024e28e3062ffcc75d8a01a36539d9c808cb#rd"
+      "title": "高仿微信6.5.7（融云版）",
+      "url": "https://juejin.im/post/58fccf59570c350058e1dc8d?utm_source=gold_browser_extension"
     },
     {
-      "img": "https://summertriptojapan.files.wordpress.com/2015/09/mount-fuji-8.jpg",
-      "title": "雍也第六",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI037reXahESkTDQzRpWqZtv4b0sacbBQH8wECsREAQJu0oFB3jIlI40rc4lMfJnfVwhTczNzA802Z7CyHrP2WKO54EjN7zPXOflobTWdzkdmlg%3D%3D&chksm=7b73dcf34c0455e5e6bc63435b4ed54b66d542d62de9464232ec6059ab2e4f2cced865f9f637#rd"
+      "img": "http://static.cnbetacdn.com/thumb/article/2017/0326/69765660503c09b.jpg",
+      "title": "仿：Android - 微信 - 朋友圈 - 小视频播放，多4句废话算我输",
+      "url": "https://juejin.im/post/59006c76a0bb9f0065dbc835?utm_source=gold_browser_extension"
     },
     {
       "img": "http://www.ilvping.com/data/uploads/kindeditor/2010/03/20100315_104343d06942.bak.jpg",
-      "title": "长治公第五 ",
-      "url": "https://mp.weixin.qq.com/s?__biz=MzU0NTA2NjE3Mw==&tempkey=cyl2ABH%2BDokVWXDcpDWAfGDJFpel65JmdhOd4pwNI01UIESjsws3RVt0qEGh7IU04ci2w%2FYlhaLP4%2F52iqDs8OIgYh3r2qSHiwhinGNLf%2BZTczNzA802Z7CyHrP2WKO5MvGtvIVZ%2BMA75AIUwmK5xw%3D%3D&chksm=7b73dcf14c0455e78f326c86cba80469aee8cbf555e409d8b86b325c54a6f138fab769820783#rd"
+      "title": "Android O移除HttpsURLConnection中不安全的TLS版本回退 ",
+      "url": "https://mp.weixin.qq.com/s/A2DP1QIaDisuXpEQ1C6odw"
     }
   ]
 }
