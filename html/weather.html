@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="content-language" content="zh-CN"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta name="msapplication-tap-highlight" content="no">
+    <title>天气</title>
+    <script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.3&key=5be6ab6d6d0e1151ef97a294e7d14fa8"></script>
+    <style type="text/css">
+        html, body {
+
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .LocaltionIcon {
+
+            width: 35px;
+            height: 35px;
+            background-color: white;
+            padding-top: 6px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+
+        }
+
+        .LocaltionIcon > img {
+
+            width: 30px;
+            height: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+
+        }
+
+        /**
+         * 深度定制
+         */
+        .amap-logo {
+
+            margin-bottom: 17px;
+        }
+
+        .amap-copyright {
+
+            display: none !important;
+
+        }
+
+        .amap-scalecontrol {
+
+            margin-bottom: 20px;
+
+        }
+
+        .makerStyle {
+            background-color: #FF4814;
+            font-size: 12px;
+            color: #fff;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            width: 50px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        .infoWindow {
+            width: 280px;
+            height: 130px;
+            font-size: 13px;
+            background-color: #fff;
+            box-shadow: 2px 2px 2px #888;
+            padding-bottom: 20px;
+        }
+
+        .info_arrow {
+            height: 20px;
+            width: 20px;
+            transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -moz-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            padding-left: 0 !important;
+            position: absolute;
+            left: 125px;
+            top: 132px;
+            background-color: #ffffff;
+            z-index: 4;
+        }
+
+        .info_title {
+            background-color: #0090FF;
+            height: 28px;
+            line-height: 28px;
+            color: #fff;
+            padding-left: 10px;
+        }
+
+        .infoWindow > div {
+            padding-left: 10px;
+            margin-bottom: 5px;
+        }
+
+        .info_name {
+            margin-top: 10px;
+        }
+
+        .info_address {
+            color: #434754;
+        }
+
+        .info_type {
+            color: #434754;
+        }
+
+        .info_dis {
+        }
+
+        .dis_span {
+            color: #FA2D00;
+            font-weight: bold;
+        }
+
+        .info_close {
+            position: absolute;
+            width: 28px;
+            height: 26px;
+            right: 0;
+            top: 0;
+        }
+
+        .info_close > img {
+            margin-top: 3px;
+            right: 3px;
+            width: 20px;
+        }
+
+        .loc_circle {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #49B3F4;
+            border-radius: 50px;
+            background-color: #64C7FA;
+            opacity: 0.5;
+        }
+
+        .loc_img {
+            position: relative;
+            left: 20px;
+            top: -34px;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="container"></div>
+<script type="text/javascript">
+    let map = new AMap.Map('container', {
+        resizeEnable: true,
+        zoom: 15,
+    });
+
+    function locationonComplete() {
+
+    }
+    function locationonError() {
+        alert('调用地图服务错误或者没有数据');
+    }
+    map.plugin(['AMap.ToolBar', 'AMap.Geolocation', "AMap.Scale"], function () {
+        let scale = new AMap.Scale();
+        let tool = new AMap.ToolBar();
+        let geolocation = new AMap.Geolocation({
+                                                   enableHighAccuracy: true,
+                                                   timeout: 10000,
+                                                   maximumAge: 0,
+                                                   convert: true,
+                                                   showButton: true,
+                                                   buttonPosition: 'LB',
+                                                   buttonOffset: new AMap.Pixel(10, 20),
+                                                   showMarker: true,
+                                                   showCircle: true,
+                                                   panToLocation: true,
+                                                   zoomToAccuracy: true,
+                                                   buttonDom: locatopnIcon,
+                                               });
+
+        map.addControl(scale);
+        map.addControl(tool);
+        map.addControl(geolocation);
+        // 直接定位
+        geolocation.getCurrentPosition();
+        AMap.event.addListener(geolocation, 'complete', locationonComplete);// 返回定位信息
+        AMap.event.addListener(geolocation, 'error', locationonError);      // 返回定位出错信息
+
+    });
+</script>
+</body>
+</html>
