@@ -9,7 +9,7 @@ import Utils from "./utils";
 // A. 实现class的继承
 console.log(Utils.size);
 console.log(Utils.pixel);
-Utils.get('http://123.57.39.116:3000/data/read?type=cookies', function (data) {
+/*Utils.get('http://123.57.39.116:3000/data/read?type=cookies', function (data) {
 
     console.log(data);
 
@@ -17,7 +17,7 @@ Utils.get('http://123.57.39.116:3000/data/read?type=cookies', function (data) {
 
     alert(err);
 
-});
+ });*/
 // http://localhost:63342/toilet/html/nearby.html?_ijt=untcjt5036pm9d12udi9d4u24e
 class tolietPage extends Component {
 

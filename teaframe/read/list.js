@@ -2,7 +2,8 @@
  * 列表.
  */
 import React, {Component} from "react";
-import {StyleSheet, Text, View} from "react-native";
+import {Image, StyleSheet, Text, View} from "react-native";
+import Utils from "./../utils";
 
 // A. 实现class的继承
 
@@ -12,7 +13,15 @@ class list extends Component {
 
         return (
             <View>
-                <Text style={styles.text}>列表 </Text>
+                <View style={styles.item}>
+                    <View>
+                        <Image source={{uri: ''}}/>
+                    </View>
+                    <View>
+                        <Text>标题</Text>
+                        <Text>2017-05-01</Text>
+                    </View>
+                </View>
             </View>
         );
 
@@ -22,8 +31,14 @@ class list extends Component {
 
 const styles = StyleSheet.create({
 
-                                     text: {
-                                         fontSize: 20
+                                     item: {
+
+                                         height: 78,
+                                         paddingLeft: 10,
+                                         paddingRight: 10,
+                                         borderBottomColor: '#EDEDED',
+                                         borderBottomWidth: Utils.pixel,
+
                                      }
 
                                  });

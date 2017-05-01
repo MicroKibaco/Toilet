@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
                                          shadowColor: '#ccc',
                                          shadowOffset: {
                                              width: 1 * Utils.pixel,
-                                             height: Utils.pixel
+                                             height: Utils.pixel,
                                          },
 
                                      },

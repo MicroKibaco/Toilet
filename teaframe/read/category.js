@@ -1,12 +1,10 @@
 /**
  * 分类
  */
-/**
- * 阅读组件
- */
 import React, {Component} from "react";
-import {StyleSheet, Text, View} from "react-native";
+import {StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import Utils from "./../utils";
+import List from "./list";
 
 // A. 实现class的继承
 
@@ -16,8 +14,10 @@ class category extends Component {
         super(props);
         // 初始状态
         this.state = {
-            data: props.data
+            data: props.data,
+            navigator: props.navigator,
         };
+        console.log('---test-----', props.test);
     }
 
     render() {
@@ -29,11 +29,13 @@ class category extends Component {
 
             if (data.hasOwnProperty(i)) {
 
-                let item = (<View style={styles.row_item} key={i}>
-                    <View style={styles.item}>
-                        <Text style={styles.title}>{data[i].text}</Text>
-                    </View>
-                </View>);
+                let item = (
+                    <TouchableOpacity style={styles.row_item} key={i}
+                                      onPress={this._goToList.bind(this, data[i].text)}>
+                        <View style={styles.item}>
+                            <Text style={styles.title}>{data[i].text}</Text>
+                        </View>
+                    </TouchableOpacity>);
 
                 if (i < 2) {
 
@@ -62,6 +64,18 @@ class category extends Component {
         );
 
     }
+
+    // 跳转列表页面
+    _goToList(name) {
+        this.state.navigator.push({
+                                      component: List,
+                                      title: name,
+                                      passProps: {
+                                          data: ''
+                                      },
+                                  });
+
+    };
 
 }
 

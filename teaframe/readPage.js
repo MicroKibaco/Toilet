@@ -20,7 +20,7 @@ class readView extends Component {
         // 初始状态
         this.state = {
 
-            isShow: false
+            isShow: false,
 
         };
     }
@@ -39,9 +39,10 @@ class readView extends Component {
                         <Hr/>
                         <Recommend name="热门推荐" data={this.state.hotTopic}/>
                         <Hr/>
-                        <Category data={this.state.category}/>
+                        <Category data={this.state.category} navigator={this.props.navigator}/>
                         <Hr/>
                         <Recommend name="清新一刻" data={this.state.other}/>
+                        <View style={styles.topHeader}></View>
                     </ScrollView> : null
                 }
 
@@ -107,6 +108,9 @@ const styles = StyleSheet.create({
 
                                      container: {
                                          flex: 1
+                                     },
+                                     topHeader: {
+                                         height: 55
                                      }
 
                                  });
