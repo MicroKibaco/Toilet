@@ -2,8 +2,9 @@
  * 推荐专题
  */
 import React, {Component} from "react";
-import {Image, StyleSheet, Text, View} from "react-native";
+import {Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 import Utils from "./../utils";
+import MyWebView from "./../myWebview";
 
 // A. 实现class的继承
 
@@ -27,16 +28,17 @@ class topic extends Component {
         for (let i in data) {
             if (data.hasOwnProperty(i)) {
                 views.push(
-                    <View style={styles.img_item} key={i}>
+                    <TouchableOpacity style={styles.img_item} key={i}
+                                      onPress={this._onShowWebPage.bind(this, data[i].url,
+                                                                        data[i].title)}>
                         <Image resizeMethod='scale' style={styles.img}
                                source={{uri: data[i].img} }/>
-                    </View>
+                    </TouchableOpacity>
                 );
             }
         }
 
         return (
-
 
             <View style={styles.container}>
                 <View>
@@ -45,14 +47,6 @@ class topic extends Component {
 
                 <View style={styles.img_view}>
                     {views}
-                    {/*  <View style={styles.img_item}>
-                     <Image resizeMethod='scale' style={styles.img}
-                     source={{uri: 'https://ai.bdstatic.com/dist/1493288513/ai_images/technology/ocr-idcard/demo-card-1.png'} }/>
-                     </View>
-                     <View style={styles.img_item}>
-                     <Image resizeMethod='scale' style={styles.img}
-                     source={{uri: 'http://wiki.mbalib.com/w/images/9/97/%E5%93%81%E7%89%8C%E8%AF%86%E5%88%AB%E7%9A%84%E9%99%B7%E9%98%B1.gif'}}/>
-                     </View>*/}
                 </View>
                 <View>
                     <Text style={styles.text2}>查看更多同期专题&gt;</Text>
@@ -60,6 +54,18 @@ class topic extends Component {
             </View>
         );
 
+    }
+
+    _onShowWebPage(url, title) {
+
+        this.props.navigator.push({
+                                      component: MyWebView,
+                                      title: title,
+                                      passProps: {
+                                          url: url
+                                      },
+                                  }
+        );
     }
 
 }
