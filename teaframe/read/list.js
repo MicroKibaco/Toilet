@@ -9,6 +9,17 @@ import Utils from "./../utils";
 
 class list extends Component {
 
+    // 构造
+    constructor(props) {
+        super(props);
+        // 初始状态
+        //   console.log(props.url);
+        this.state = {
+            url: props.url
+        };
+
+    }
+
     render() {
 
         return (

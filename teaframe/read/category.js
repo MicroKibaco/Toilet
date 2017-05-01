@@ -17,7 +17,6 @@ class category extends Component {
             data: props.data,
             navigator: props.navigator,
         };
-        console.log('---test-----', props.test);
     }
 
     render() {
@@ -67,15 +66,40 @@ class category extends Component {
 
     // 跳转列表页面
     _goToList(name) {
+        let type = this._getType(name);
+        let url = 'http://192.168.23.70:3000/data/read?type=' + type;
         this.state.navigator.push({
                                       component: List,
                                       title: name,
+                                      barTintColor: '#fff',
                                       passProps: {
-                                          data: ''
+                                          url: ''
                                       },
                                   });
 
     };
+
+    _getType(name) {
+        let type = '';
+        switch (name) {
+            case '互联网':
+                type = 'it';
+                break;
+            case '笑话':
+                type = 'cookies';
+                break;
+            case '散文':
+                type = 'sanwen';
+                break;
+            case '管理':
+                type = 'manager';
+                break;
+            default:
+                type = 'it';
+                break;
+        }
+        return type;
+    }
 
 }
 
