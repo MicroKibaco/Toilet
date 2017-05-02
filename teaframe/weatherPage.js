@@ -13,7 +13,7 @@ class weatherPage extends Component {
         return (
             <View style={styles.container}>
                 <MyWebView
-                    url="http://192.168.23.70:63342/toilet/html/weather.html"/>
+                    url="http://www.baidu.com"/>
             </View>
         );
 
