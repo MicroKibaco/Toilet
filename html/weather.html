@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="content-language" content="zh-CN"/>
@@ -13,8 +13,6 @@
     <meta name="x5-page-mode" content="app">
     <meta name="msapplication-tap-highlight" content="no">
     <title>天气</title>
-    <script type="text/javascript"
-            src="http://webapi.amap.com/maps?v=1.3&key=5be6ab6d6d0e1151ef97a294e7d14fa8"></script>
     <style type="text/css" rel="stylesheet">
         html, body {
             margin: 0;
@@ -108,70 +106,84 @@
             font-size: 15px;
         }
     </style>
-
+    <script type="text/javascript"
+            src="http://webapi.amap.com/maps?v=1.3&key=5be6ab6d6d0e1151ef97a294e7d14fa8"></script>
 </head>
 <body>
 <div id="container"></div>
+<div id="panel"></div>
+<div class="weather_panel">
+    <div class="weather_title">天气信息</div>
+    <div>省/市: <span id="weather_pro"></span></div>
+    <div>区/县: <span id="weather_city"></span></div>
+    <div>天气: <span id="weather_weather"></span></div>
+    <div>风向: <span id="weather_wind"></span></div>
+    <div>温度: <span id="weather_temp"></span>℃</div>
+    <div>报告时间: <span id="weather_time"></span></div>
+</div>
 <script type="text/javascript">
-    let map = new AMap.Map('container', {
-        resizeEnable: true,
-        zoom: 15,
+    var isiPhone = navigator.userAgent.toLocaleLowerCase().match(/iPhone/i);
+    var map = new AMap.Map('container', {
+        resizeEnable: true
     });
+    var walking = null;
 
-    map.plugin(['AMap.ToolBar', 'AMap.Geolocation', "AMap.Scale"], function () {
-        let scale = new AMap.Scale();
-        let tool = new AMap.ToolBar();
-        let geolocation = new AMap.Geolocation({
+    var locationIcon = '<div class="locationIcon">'
+                       + '<img src="../images/map/geolocation.png"/>'
+                       + '</div>';
+
+    var locationComplete = function (data) {
+        map.clearMap();
+        map.setZoom(16);
+        showWeather([data.position.lng, data.position.lat]);
+    };
+    var locationError = function () {
+        alert('定位失败!');
+    };
+
+    map.plugin('AMap.Geolocation', function () {
+        var geolocation = new AMap.Geolocation({
                                                    enableHighAccuracy: true,
-                                                   timeout: 10000,
+                                                   timeout: 60000,
                                                    maximumAge: 0,
                                                    convert: true,
                                                    showButton: true,
                                                    buttonPosition: 'LB',
-                                                   buttonOffset: new AMap.Pixel(10, 20),
+                                                   buttonOffset: new AMap.Pixel(10, 10),
                                                    showMarker: true,
                                                    showCircle: true,
                                                    panToLocation: true,
                                                    zoomToAccuracy: true,
-                                                   buttonDom: locatopnIcon,
+                                                   buttonDom: locationIcon
                                                });
-
-        map.addControl(scale);
-        map.addControl(tool);
         map.addControl(geolocation);
-        // 直接定位
         geolocation.getCurrentPosition();
-        AMap.event.addListener(geolocation, 'complete', locationonComplete);// 返回定位信息
-        AMap.event.addListener(geolocation, 'error', locationonError);      // 返回定位出错信息
-
+        AMap.event.addListener(geolocation, 'complete', locationComplete);
+        AMap.event.addListener(geolocation, 'error', locationError);
     });
 
-    function locationonComplete(data) {
-
-        map.clearMap();
-        map.setZoom(16);
-        showWeather([data.position.lng, data.position.lat]);
-
-    }
-    function locationonError() {
-        alert('定位失败，请在手机上开启定位:设置->隐私->定位服务->找厕所->使用应用期间');
-    }
+    map.plugin(["AMap.ToolBar"], function () {
+        map.addControl(new AMap.ToolBar());
+    });
+    map.plugin(["AMap.Scale"], function () {
+        map.addControl(new AMap.Scale());
+    });
 
     function showWeather(center) {
-        let marker = new AMap.Marker({
+        var marker = new AMap.Marker({
                                          position: center,
                                          map: map,
-                                         content: '<div class="loc_circle"></div><img class="loc_img" src="loc.png" style="width:16px;"/>'
+                                         content: '<div class="loc_circle"></div><img class="loc_img" src="../images/map/loc.png" style="width:16px;"/>'
                                      });
 
         AMap.service('AMap.Geocoder', function () {
-            let geo = new AMap.Geocoder();
+            var geo = new AMap.Geocoder();
             geo.getAddress(center, function (status, result) {
                 if (status === 'complete' && result.info === 'OK') {
                     //获取天气信息
-                    let district = result.regeocode.addressComponent.district;
+                    var district = result.regeocode.addressComponent.district;
                     AMap.service('AMap.Weather', function () {
-                        let weather = new AMap.Weather();
+                        var weather = new AMap.Weather();
                         weather.getLive(district, function (err, result) {
                             if (err) {
                                 return;

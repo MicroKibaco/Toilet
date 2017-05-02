@@ -10,11 +10,11 @@ import Mywebview from "./myWebview";
 // console.log(Utils.pixel);
 /*Utils.get('http://123.57.39.116:3000/data/read?type=cookies', function (data) {
 
-    console.log(data);
+ console.log(data);
 
-}, function (err) {
+ }, function (err) {
 
-    alert(err);
+ alert(err);
 
  });*/
 // http://localhost:63342/toilet/html/nearby.html?_ijt=untcjt5036pm9d12udi9d4u24e
@@ -25,7 +25,7 @@ class tolietPage extends Component {
         return (
             <View style={styles.container}>
                 <Mywebview
-                    url='http://localhost:63342/toilet/html/nearby.html?_ijt=untcjt5036pm9d12udi9d4u24e'/>
+                    url='http://www.yangzhengyou.com/html/nearby.html'/>
             </View>
         );
 
