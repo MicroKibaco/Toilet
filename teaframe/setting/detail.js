@@ -50,7 +50,7 @@ class detail extends Component {
 }
 const styles = StyleSheet.create({
                                      container: {
-                                         flex: 1,
+                                         flex: 1
                                      },
                                      center: {
                                          justifyContent: 'center',
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
                                          fontWeight: '300',
                                          marginBottom: 15,
                                          marginLeft: 10,
-                                         marginTop: 15
+                                         marginTop: 15,
                                      }
                                  });
 

@@ -13,6 +13,8 @@ import {
 } from "react-native";
 import Utils from "./utils";
 import Detail from "./setting/detail";
+import Help from "./setting/help";
+import Tips from "./setting/tips";
 
 // A. 实现class的继承
 
@@ -41,11 +43,11 @@ class settingView extends Component {
 
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.text_view} navigator={this.props.navigator}
-                                  onPress={this._goPage.bind(this, Detail, '帮助中心')}>
+                                  onPress={this._goPage.bind(this, Help, '帮助中心')}>
                     <Text style={styles.text}>帮助中心</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.text_view} navigator={this.props.navigator}
-                                  onPress={this._goPage.bind(this, Detail, '服务条款')}>
+                                  onPress={this._goPage.bind(this, Tips, '服务条款')}>
                     <Text style={styles.text}>服务条款</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.text_view, styles.bottom_add]}
