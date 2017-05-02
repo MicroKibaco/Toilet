@@ -16,6 +16,17 @@ class About extends Component {
     }
 }
 
+// iOS和Android上都可用
+/*Alert.alert(
+ '提示',
+ '杨正友',
+ [
+ {text: '取消', onPress: () => console.log('Cancel Pressed'), style: 'cancel'},
+ {text: '确认', onPress: () => console.log('OK Pressed')},
+ ],
+ {cancelable: false}
+ );*/
+
 const styles = StyleSheet.create({
                                      container: {
                                          flex: 1
