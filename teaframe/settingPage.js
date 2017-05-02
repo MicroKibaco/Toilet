@@ -15,6 +15,7 @@ import Utils from "./utils";
 import Detail from "./setting/detail";
 import Help from "./setting/help";
 import Tips from "./setting/tips";
+import About from "./setting/about";
 
 // A. 实现class的继承
 
@@ -52,7 +53,7 @@ class settingView extends Component {
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.text_view, styles.bottom_add]}
                                   navigator={this.props.navigator}
-                                  onPress={this._goPage.bind(this, Detail, '关于')}>
+                                  onPress={this._goPage.bind(this, About, '关于')}>
                     <Text style={styles.text}>关于</Text>
                 </TouchableOpacity>
 
