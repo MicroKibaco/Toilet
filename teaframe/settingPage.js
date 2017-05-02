@@ -2,12 +2,28 @@
  * 设置组件
  */
 import React, {Component} from "react";
-import {Image, NavigatorIOS, ScrollView, StyleSheet, Text, View} from "react-native";
+import {
+    Image,
+    NavigatorIOS,
+    ScrollView,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View
+} from "react-native";
 import Utils from "./utils";
+import Detail from "./setting/detail";
 
 // A. 实现class的继承
 
 class settingView extends Component {
+
+    // 构造
+    constructor(props) {
+        super(props);
+        // 初始状态
+        this.state = {};
+    }
 
     render() {
 
@@ -17,25 +33,40 @@ class settingView extends Component {
                     <Image style={styles.icon}
                            source={{uri: 'http://www.yangzhengyou.com/images/map/logo.png'}}
                            resizeMode="contain"/>
+                    <Text style={styles.version}>v1.0.0</Text>
                 </View>
-                <View style={styles.text_view} navigator={this.props.navigator}>
+                <TouchableOpacity style={styles.text_view} navigator={this.props.navigator}
+                                  onPress={this._goPage.bind(this, Detail, '功能介绍')}>
                     <Text style={styles.text}>功能介绍</Text>
-                </View>
-                <View style={styles.text_view} navigator={this.props.navigator}>
+
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.text_view} navigator={this.props.navigator}
+                                  onPress={this._goPage.bind(this, Detail, '帮助中心')}>
                     <Text style={styles.text}>帮助中心</Text>
-                </View>
-                <View style={styles.text_view} navigator={this.props.navigator}>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.text_view} navigator={this.props.navigator}
+                                  onPress={this._goPage.bind(this, Detail, '服务条款')}>
                     <Text style={styles.text}>服务条款</Text>
-                </View>
-                <View style={[styles.text_view, styles.bottom_add]}
-                      navigator={this.props.navigator}>
+                </TouchableOpacity>
+                <TouchableOpacity style={[styles.text_view, styles.bottom_add]}
+                                  navigator={this.props.navigator}
+                                  onPress={this._goPage.bind(this, Detail, '关于')}>
                     <Text style={styles.text}>关于</Text>
-                </View>
+                </TouchableOpacity>
 
             </ScrollView>
         );
 
     }
+
+    _goPage(component, title) {
+
+        this.props.navigator.push({
+                                      component: component,
+                                      title: title,
+                                  });
+
+    };
 
 }
 
@@ -54,7 +85,7 @@ const styles = StyleSheet.create({
                                          borderTopWidth: Utils.pixel,
                                          borderTopColor: '#ECECEC',
                                          height: 40,
-                                         paddingLeft: 10,
+                                         paddingLeft: 16,
                                          justifyContent: 'center'
                                      },
                                      text: {
@@ -66,7 +97,14 @@ const styles = StyleSheet.create({
                                      bottom_add: {
                                          borderBottomWidth: Utils.pixel,
                                          borderBottomColor: "#ECECEC",
-                                     }
+                                     },
+                                     version: {
+
+                                         fontSize: 13,
+                                         fontWeight: '300',
+                                         marginBottom: 30,
+
+                                     },
                                  });
 
 class setting extends Component {
