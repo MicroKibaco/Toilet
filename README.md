@@ -26,7 +26,7 @@
 
 >## 服务端
 
-<img src="./images/document/service.png"  width="1000" height="900"/>
+<img src="./images/document/service.png"  width="600" height="400"/>
 
 - 获取模块列表服务:
 
@@ -59,9 +59,8 @@
 #### App Store (iOS 8.0+)  搜索“厕所在哪” 即可下载
 ![App Store](./images/document/ios.png)
 >## 架构
-![架构](./images/document/architecture.png)
+<img src="./images/document/architecture.png"  width="700" height="400"/>
 
+### Thanks!
 
-#### Thanks!
-
- [vczero](https://github.com/vczero/toilet)
+#### [vczero](https://github.com/vczero/toilet)
