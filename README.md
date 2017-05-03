@@ -1,5 +1,7 @@
 # 厕所在哪!
 
+> 本项目非本人原创项目,参照Alibaba开发人员vczero的Github项目所写。如有错误欢迎指正，如有侵权，请联系我删除。
+
 > 课程内容
 
 1. **NodeJs环境搭建**
@@ -42,7 +44,7 @@
 
  >## 客户端
 
->## 架构
+>#### IOS项目演示效果
 
 ![效果演示](./images/document/reactnative.gif)
 
@@ -56,3 +58,8 @@
 ![App Store](./images/document/ios.png)
 >## 架构
 ![架构](./images/document/architecture.png)
+
+
+#### Thanks!
+
+ [vczero](https://github.com/vczero/toilet)
