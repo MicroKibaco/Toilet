@@ -2,7 +2,7 @@
 
 > 本项目非本人原创项目,参照Alibaba开发人员vczero的Github项目所写。如有错误欢迎指正，如有侵权，请联系我删除。
 
-> 课程内容
+> 项目内容
 
 1. **NodeJs环境搭建**
 
@@ -46,7 +46,9 @@
 
 >#### IOS项目演示效果
 
-![效果演示](./images/document/reactnative.gif)
+
+<img src="./images/document/reactnative.gif"  width="360" height="680"/>
+
 
 ##### 地图中自动搜索附近2KM以内的卫生间，提供卫生间基础信息，以及路线导航规划。
 ![自动搜索附近](./images/document/map.png)
