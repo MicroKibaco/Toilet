@@ -61,6 +61,6 @@
 >## 架构
 <img src="./images/document/architecture.png"  width="700" height="400"/>
 
-### Thanks!
+### 参考文档:
 
 #### [vczero](https://github.com/vczero/toilet)
